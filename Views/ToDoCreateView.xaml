@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ReactiveUIApplication.Views.ToDoCreateView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            mc:Ignorable="d"
+            d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Create ToDo"
+                       Margin="0, 7, 0, 0"
+                       HorizontalAlignment="Center"
+                       FontSize="14"
+                       FontWeight="Bold" />
+            <TextBlock Text="Name" Margin="0, 7, 0, 0" FontWeight="Bold" />
+            <TextBox x:Name="Name" />
+            <TextBlock Text="Description" Margin="0, 7, 0, 0" FontWeight="Bold" />
+            <TextBox x:Name="Description" />
+            <TextBlock Text="Priority" Margin="0, 7, 0, 0" FontWeight="Bold" />
+            <ComboBox x:Name="Priority" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource PriorityConverter}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="Due Date" Margin="0, 7, 0, 0" FontWeight="Bold" />
+            <DatePicker Name="DueDate" />
+        </StackPanel>
+        <Button Grid.Row="1" x:Name="Submit" Content="Save" FontSize="14" FontWeight="Bold" Margin="0, 4, 0, 4" />
+    </Grid>
+</UserControl>

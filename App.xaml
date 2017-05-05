@@ -1,0 +1,12 @@
+﻿<Application x:Class="ReactiveUIApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:models="clr-namespace:ReactiveUIApplication.Models">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Don't remove or you get NullRefferenceException-->
+            <ResourceDictionary.MergedDictionaries />
+            <models:PriorityConverter x:Key="PriorityConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
