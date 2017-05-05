@@ -96,6 +96,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\Extentions.cs" />
+    <Compile Include="Enums\MenuOption.cs" />
+    <Compile Include="Enums\PriorityOption.cs" />
     <Compile Include="Models\Credentials.cs" />
     <Compile Include="Models\ToDoItem.cs" />
     <Compile Include="Models\PriorityConverter.cs" />

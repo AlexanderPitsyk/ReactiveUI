@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ReactiveUIApplication.Common;
+using ReactiveUIApplication.Enums;
 using ReactiveUIApplication.Models;
 
 namespace ReactiveUIApplication.Repositories

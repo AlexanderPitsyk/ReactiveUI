@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 using ReactiveUIApplication.Common;
+using ReactiveUIApplication.Enums;
 
 namespace ReactiveUIApplication.Models
 {

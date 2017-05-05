@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ReactiveUI;
 using ReactiveUIApplication.Common;
+using ReactiveUIApplication.Enums;
 using ReactiveUIApplication.Models;
 using ReactiveUIApplication.Repositories;
 

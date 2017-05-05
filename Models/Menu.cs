@@ -1,4 +1,6 @@
-﻿namespace ReactiveUIApplication.Models
+﻿using ReactiveUIApplication.Enums;
+
+namespace ReactiveUIApplication.Models
 {
     public class Menu
     {
@@ -14,13 +16,5 @@
             return Option.ToString();
         }
         
-    }
-
-    public enum MenuOption
-    {
-        Login,
-        User,
-        List,
-        Create
     }
 }

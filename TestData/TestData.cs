@@ -57,6 +57,7 @@ namespace ReactiveUIApplication.TestData
                     DueDate = DateTime.Now,
                     IsDone = false
                 });
+
                 db.SaveChanges();
             }
         }

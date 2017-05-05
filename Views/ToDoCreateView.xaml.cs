@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using ReactiveUI;
+using ReactiveUIApplication.Enums;
 using ReactiveUIApplication.Models;
 using ReactiveUIApplication.ViewModels;
 

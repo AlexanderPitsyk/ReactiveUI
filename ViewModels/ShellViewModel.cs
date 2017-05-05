@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reactive.Linq;
 using ReactiveUI;
+using ReactiveUIApplication.Enums;
 using ReactiveUIApplication.Models;
 using ReactiveUIApplication.Repositories;
 using Splat;

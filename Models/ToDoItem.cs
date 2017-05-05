@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ReactiveUIApplication.Common;
+using ReactiveUIApplication.Enums;
 
 namespace ReactiveUIApplication.Models
 {
@@ -38,13 +39,5 @@ namespace ReactiveUIApplication.Models
             get { return Priority; }
             set { PriorityId = (int)value; }
         }
-    }
-
-    public enum PriorityOption
-    {
-        Default,
-        Minor,
-        Major,
-        Critical
     }
 }
