@@ -1,15 +1,8 @@
-﻿using System;
-using System.Linq;
-using ReactiveUI;
+﻿using ReactiveUI;
 using ReactiveUIApplication.Models;
 using ReactiveUIApplication.ViewModels;
 using ReactiveUIApplication.Views;
 using Splat;
-using LoginView = ReactiveUIApplication.Views.LoginView;
-using MenuView = ReactiveUIApplication.Views.MenuView;
-using ShellView = ReactiveUIApplication.Views.ShellView;
-using ToDoCreateView = ReactiveUIApplication.Views.ToDoCreateView;
-using ToDoListView = ReactiveUIApplication.Views.ToDoListView;
 
 namespace ReactiveUIApplication.Repositories
 {
@@ -24,8 +17,8 @@ namespace ReactiveUIApplication.Repositories
             // This is our main window host
             Locator.CurrentMutable.RegisterLazySingleton(() => this, typeof (IScreen));
             // Contexts
-            Locator.CurrentMutable.Register(() => new UserContext(), typeof(UserContext));
-            Locator.CurrentMutable.Register(() => new ToDoContext(), typeof(ToDoContext));
+            Locator.CurrentMutable.Register(() => new UserContext(), typeof (UserContext));
+            Locator.CurrentMutable.Register(() => new ToDoContext(), typeof (ToDoContext));
             // Repositories
             Locator.CurrentMutable.Register(() =>
                 new UserRepository(Locator.Current.GetService<UserContext>()),

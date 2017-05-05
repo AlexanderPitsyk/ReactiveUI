@@ -11,47 +11,46 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="ToDo List" FontSize="14" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock Grid.Row="0" Text="ToDo List" FontSize="14" FontWeight="Bold" TextAlignment="Center" />
         <DataGrid Grid.Row="1"
-                      Name="DataGrid"
-                      Margin="0,7,0,0"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      HorizontalScrollBarVisibility="Auto"
-                      VerticalScrollBarVisibility="Visible">
-                <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                  Name="DataGrid"
+                  Margin="0,7,0,0"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
                 <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
-                <DataGridTemplateColumn Header="Created" >
+                <DataGridTemplateColumn Header="Created">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <DatePicker SelectedDate="{Binding Created}" IsEnabled="False"/>
+                            <DatePicker SelectedDate="{Binding Created}" IsEnabled="False" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn >
-                <DataGridTemplateColumn Header="DueDate" >
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="DueDate">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <DatePicker SelectedDate="{Binding DueDate}"/>
+                            <DatePicker SelectedDate="{Binding DueDate}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn >
-                <DataGridTemplateColumn Header="Priority" >
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Priority">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <ComboBox IsEditable="True"
                                       IsReadOnly="True"
                                       ItemsSource="{Binding Collection}"
-                                      SelectedValue="{Binding PriorityItem, Mode=TwoWay}" >
-                            </ComboBox>
+                                      SelectedValue="{Binding PriorityItem, Mode=TwoWay}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn >
+                </DataGridTemplateColumn>
                 <DataGridCheckBoxColumn Header="Done" Binding="{Binding IsDone}" />
-                </DataGrid.Columns>
-            </DataGrid>
+            </DataGrid.Columns>
+        </DataGrid>
 
-        <StackPanel Grid.Row="2" Orientation="Vertical" >
+        <StackPanel Grid.Row="2" Orientation="Vertical">
             <Button x:Name="Delete" Margin="0, 4, 0, 4" Content="Delete" FontSize="14" FontWeight="Bold" />
             <Button x:Name="Submit" Margin="0, 4, 0, 4" Content="Save" FontSize="14" FontWeight="Bold" />
         </StackPanel>

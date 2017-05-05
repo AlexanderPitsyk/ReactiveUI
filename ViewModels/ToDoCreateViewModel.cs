@@ -44,10 +44,7 @@ namespace ReactiveUIApplication.ViewModels
                 return true;
             }));
             Submit.ThrownExceptions.ObserveOn(RxApp.MainThreadScheduler).Subscribe(e => MessageBox.Show(e.Message));
-            Submit.Subscribe(param =>
-            {
-                MessageBox.Show(!param ? Warning : Complite);
-            });
+            Submit.Subscribe(param => { MessageBox.Show(!param ? Warning : Complite); });
         }
     }
 }

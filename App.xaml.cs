@@ -2,8 +2,8 @@
 using ReactiveUI;
 using ReactiveUIApplication.Repositories;
 using ReactiveUIApplication.ViewModels;
+using ReactiveUIApplication.Views;
 using Splat;
-using ShellView = ReactiveUIApplication.Views.ShellView;
 
 namespace ReactiveUIApplication
 {
@@ -20,7 +20,7 @@ namespace ReactiveUIApplication
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            ShellView = (ShellView)Locator.Current.GetService<IViewFor<ShellViewModel>>();
+            ShellView = (ShellView) Locator.Current.GetService<IViewFor<ShellViewModel>>();
             ShellView.Show();
         }
     }

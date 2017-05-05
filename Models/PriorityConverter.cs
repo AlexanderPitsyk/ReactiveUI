@@ -15,7 +15,7 @@ namespace ReactiveUIApplication.Models
                 return null;
             }
 
-            return Extentions.GetEnumByIndex<PriorityOption>((int)value);
+            return Extentions.GetEnumByIndex<PriorityOption>((int) value);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

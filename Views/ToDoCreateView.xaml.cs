@@ -2,7 +2,6 @@
 using System.Windows;
 using ReactiveUI;
 using ReactiveUIApplication.Enums;
-using ReactiveUIApplication.Models;
 using ReactiveUIApplication.ViewModels;
 
 namespace ReactiveUIApplication.Views
@@ -19,12 +18,11 @@ namespace ReactiveUIApplication.Views
         public ToDoCreateView()
         {
             InitializeComponent();
-            
 
             this.Bind(ViewModel, vm => vm.ToDoItem.Name, v => v.Name.Text);
             this.Bind(ViewModel, vm => vm.ToDoItem.Description, v => v.Description.Text);
 
-            Priority.ItemsSource = Enum.GetValues(typeof(PriorityOption));
+            Priority.ItemsSource = Enum.GetValues(typeof (PriorityOption));
             this.WhenAnyValue(e => e.Priority.SelectedIndex).BindTo(this, e => e.ViewModel.ToDoItem.PriorityId);
             this.Bind(ViewModel, vm => vm.ToDoItem.PriorityId, v => v.Priority.SelectedIndex);
 

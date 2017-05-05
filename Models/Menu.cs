@@ -4,17 +4,16 @@ namespace ReactiveUIApplication.Models
 {
     public class Menu
     {
-        public MenuOption Option { get; }
-
         public Menu(MenuOption option)
         {
             Option = option;
         }
 
+        public MenuOption Option { get; }
+
         public override string ToString()
         {
             return Option.ToString();
         }
-        
     }
 }

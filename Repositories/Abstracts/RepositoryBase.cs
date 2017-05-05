@@ -7,8 +7,8 @@ namespace ReactiveUIApplication.Repositories
 {
     public abstract class RepositoryBase<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly DbContext Context;
         private readonly DbSet<TEntity> _dbSet;
+        protected readonly DbContext Context;
 
         protected RepositoryBase(DbContext context)
         {
@@ -19,11 +19,6 @@ namespace ReactiveUIApplication.Repositories
         public IEnumerable<TEntity> GetEntityList()
         {
             return _dbSet.AsNoTracking().ToList();
-        }
-
-        public IEnumerable<TEntity> GetEntityList(Func<TEntity, bool> predicate)
-        {
-            return _dbSet.AsNoTracking().Where(predicate).ToList();
         }
 
         public TEntity GetEntityById(int id)
@@ -43,6 +38,11 @@ namespace ReactiveUIApplication.Repositories
         {
             Context.Entry(item).State = EntityState.Deleted;
             Context.SaveChanges();
+        }
+
+        public IEnumerable<TEntity> GetEntityList(Func<TEntity, bool> predicate)
+        {
+            return _dbSet.AsNoTracking().Where(predicate).ToList();
         }
     }
 }

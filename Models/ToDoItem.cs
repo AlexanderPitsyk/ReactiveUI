@@ -37,7 +37,7 @@ namespace ReactiveUIApplication.Models
         public PriorityOption PriorityItem
         {
             get { return Priority; }
-            set { PriorityId = (int)value; }
+            set { PriorityId = (int) value; }
         }
     }
 }
